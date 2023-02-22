@@ -5,7 +5,7 @@ from datetime import datetime
 today = datetime.today()
 
 # Read in the data
-data = pd.read_csv('/Users/aaronfleishman/Desktop/IE_University/MBD/Courses/Captsone/Data_for_streamlit/clean_sample_data_capstone_project.csv')
+data = pd.read_csv('clean_sample_data_capstone_project.csv')
 
 # Create the main title for the dashboard
 st.title("Radio Link Investment Decision Tool")
