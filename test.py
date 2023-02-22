@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 from datetime import datetime
 today = datetime.today()
+st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # Read in the data
 data = pd.read_csv('clean_sample_data_capstone_project.csv')
