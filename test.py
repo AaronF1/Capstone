@@ -42,8 +42,8 @@ if "Select All" not in owner:
     filtered_data = filtered_data[filtered_data["Owner"].isin(owner)]
 if "Select All" not in municipality:
     filtered_data = filtered_data[filtered_data["Municipality"].isin(municipality)]
-filtered_data = data[(data['Frequency GHZ rounded'] >= frequency_min) & (data['Frequency GHZ rounded'] <= frequency_max)]
-filtered_data = data[(data['Number of concession'] >= concession_min) & (data['Number of concession'] <= concession_max)]
+filtered_data = filtered_data[(filtered_data['Frequency GHZ rounded'] >= frequency_min) & (filtered_data['Frequency GHZ rounded'] <= frequency_max)]
+filtered_data = filtered_data[(filtered_data['Number of concession'] >= concession_min) & (filtered_data['Number of concession'] <= concession_max)]
 if "Select All" not in population:
     filtered_data = filtered_data[filtered_data["Population"].isin(population)]
 
