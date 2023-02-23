@@ -5,6 +5,7 @@ today = datetime.today()
 st.set_option('deprecation.showfileUploaderEncoding', False)
 import folium
 from folium.plugins import MarkerCluster
+import plotly.express as px
 
 # Read in the data
 data = pd.read_csv('clean_sample_data_capstone_project.csv')
