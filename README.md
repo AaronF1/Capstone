@@ -2,7 +2,7 @@
 
 Radio Link Investment Decision Tool
 
-This repository contains a Python script to generate a dashboard for Radio Link Investment Decision Tool using the Streamlit framework. The dashboard allows users to filter and visualize data related to radio link concessions in Brazil.
+This repository contains a Python script to generate a dashboard for Radio Link Investment Decision Tool using the Streamlit framework. The dashboard allows users to filter and visualize data related to radio link concessions in Spain.
 
 Prerequisites
 
@@ -32,6 +32,6 @@ Usage
 
 Once the script is running, a web page will open up in your default browser showing the Radio Link Investment Decision Tool dashboard. The dashboard allows users to filter the data based on various options such as owner, municipality, frequency, population, and number of concessions. The filtered data is displayed in a table and various charts and maps, showing information such as average time until termination, average days since last opening, frequency weight, and number of concessions within frequency range.
 
-License
+Ownership:
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project was created for the IE School of Science and Technology
