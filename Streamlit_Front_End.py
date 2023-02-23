@@ -16,7 +16,7 @@ img_path1 = 'Lineox Logo.png'
 img_path2 = 'IE_HST_Logo.png'
 
 # Display the images side by side
-col1, col2 = st.beta_columns(2)
+col1, col2 = st.columns(2)
 with col1:
     st.image(img_path1, use_column_width=True)
 with col2:
