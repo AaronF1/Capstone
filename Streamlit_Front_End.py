@@ -104,8 +104,8 @@ filtered_data.sort_values(by='investment_score', ascending=False, inplace=True)
 
 
 # Create the table with the filtered data
-st.dataframe(filtered_data)
-# st.dataframe(filtered_data[['Reference', 'Owner', 'Municipality', 'Frequency GHZ rounded', 'Number of concession', 'number_of_concessions_within_frequency_range', 'percentage_of_concessions_within_frequency_range', 'investment_score', 'rank_average_time_until_termination', 'rank_average_days_since_last_opening', 'rank_percentage_of_concessions_within_frequency_range']])
+# st.dataframe(filtered_data)
+st.dataframe(filtered_data[['Reference', 'Owner', 'Municipality', 'Frequency GHZ rounded', 'Number of concession', 'number_of_concessions_within_frequency_range', 'percentage_of_concessions_within_frequency_range', 'investment_score', 'rank_average_time_until_termination', 'rank_average_days_since_last_opening', 'rank_percentage_of_concessions_within_frequency_range']])
 
 
 # Add chart for number of concessions per owner
