@@ -103,10 +103,10 @@ def download_excel(data):
     excel_buffer.seek(0)
     return excel_buffer
 
-if st.button('Click Here to Download Filtered Data as Excel'):
+if st.button('Click Here to Download the Filtered Data as an Excel File'):
     excel_buffer = download_excel(filtered_data)
     st.download_button(
-        label="Click Here to Confirm Download Filtered Data",
+        label="Click Here to Confirm Download of Filtered Data as an Excel File",
         data=excel_buffer,
         file_name="filtered_data.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
