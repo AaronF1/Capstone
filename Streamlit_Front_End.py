@@ -1,11 +1,4 @@
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-from datetime import datetime
-today = datetime.today()
-st.set_option('deprecation.showfileUploaderEncoding', False)
-import folium
-from folium.plugins import MarkerCluster
+
 
 # Read in the data
 data = pd.read_csv('clean_sample_data_capstone_project1111111111.csv')
