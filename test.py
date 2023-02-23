@@ -4,9 +4,11 @@ import plotly.express as px
 from datetime import datetime
 today = datetime.today()
 st.set_option('deprecation.showfileUploaderEncoding', False)
+import folium
+from folium.plugins import MarkerCluster
 
 # Read in the data
-data = pd.read_csv('clean_sample_data_capstone_project.csv')
+data = pd.read_csv('/Users/aaronfleishman/Desktop/IE_University/MBD/Courses/Captsone/Data_for_streamlit/clean_sample_data_capstone_project.csv')
 
 # Create the main title for the dashboard
 st.title("Radio Link Investment Decision Tool")
@@ -44,6 +46,7 @@ if "Select All" not in municipality:
     filtered_data = filtered_data[filtered_data["Municipality"].isin(municipality)]
 filtered_data = filtered_data[(filtered_data['Frequency GHZ rounded'] >= frequency_min) & (filtered_data['Frequency GHZ rounded'] <= frequency_max)]
 filtered_data = filtered_data[(filtered_data['Number of concession'] >= concession_min) & (filtered_data['Number of concession'] <= concession_max)]
+
 if "Select All" not in population:
     filtered_data = filtered_data[filtered_data["Population"].isin(population)]
 
@@ -113,11 +116,13 @@ st.plotly_chart(fig)
 
 
 
-import folium
-from folium.plugins import MarkerCluster
 
+st.header("Map Showing Midpoint of Muncipalities with Concessions Within Selected Concession Range")
 # Create the map 
 map = folium.Map(location=[40.416775, -3.703790], zoom_start=5)
+
+# go through filtered_data and only select the rows where longitude and latitude are not null
+filtered_data = filtered_data[filtered_data['Longitude'].notna()]
 
 # Create a marker cluster
 marker_cluster = MarkerCluster().add_to(map)
@@ -136,10 +141,3 @@ for index, row in filtered_data.iterrows():
 
 # Display the map
 st.write(map)
-
-
-
-
-
-
-
