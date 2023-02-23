@@ -11,6 +11,18 @@ import io
 # Read in the data
 data = pd.read_csv('clean_sample_data_capstone_project.csv')
 
+# Set up the file paths to your images
+img_path1 = 'Lineox Logo.png'
+img_path2 = 'IE_HST_Logo.png'
+
+# Display the images side by side
+col1, col2 = st.beta_columns(2)
+with col1:
+    st.image(img_path1, use_column_width=True)
+with col2:
+    st.image(img_path2, use_column_width=True)
+
+
 # Create the main title for the dashboard
 st.title("Radio Link Investment Decision Tool")
 
