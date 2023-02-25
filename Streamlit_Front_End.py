@@ -31,7 +31,7 @@ st.sidebar.title("Filter Options")
 owner = st.sidebar.multiselect("Select Owner:", ["Select All"] + sorted(data["Owner"].unique().tolist()), default=["Select All"])
 municipality = st.sidebar.multiselect("Select Municipality:", ["Select All"] + sorted(data["Municipality"].unique().tolist()), default=["Select All"])
 frequencies = sorted(data["Frequency GHZ rounded"].unique())
-default_frequencies = [15, 18, 22, 23, 24]
+default_frequencies = [15, 22, 23, 24]
 selected_frequencies = st.sidebar.multiselect("Select Frequency GHZ Rounded:", frequencies, default=default_frequencies)
 concession_min, concession_max = st.sidebar.slider(
     "Select Number of Concessions Range:",
