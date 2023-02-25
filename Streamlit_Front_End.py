@@ -130,7 +130,7 @@ concessions_per_owner = filtered_data.groupby('Owner').size().reset_index(name='
 fig = px.bar(concessions_per_owner, x='Owner', y='counts', color='counts')
 st.plotly_chart(fig)
 
-st.header("Map Showing Midpoint of Muncipalities with Concessions Within Selected Concession Range")
+st.header("Map Showing Midpoint of Muncipalities of Concessions Within Selected Frequency Range")
 # Create the map 
 map = folium.Map(location=[40.416775, -3.703790], zoom_start=5)
 
