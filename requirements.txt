@@ -3,3 +3,7 @@ folium>=0.13
 branca==0.3.1
 plotly==5.10.0
 xlsxwriter==3.0.8
+pandas==1.4.4
+numpy==1.21.5
+pandas_profiling==3.6.2
+re==2.2.1
