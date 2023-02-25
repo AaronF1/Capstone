@@ -31,7 +31,7 @@ st.sidebar.title("Filter Options")
 owner = st.sidebar.multiselect("Select Owner:", ["Select All"] + sorted(data["Owner"].unique().tolist()), default=["Select All"])
 municipality = st.sidebar.multiselect("Select Municipality:", ["Select All"] + sorted(data["Municipality"].unique().tolist()), default=["Select All"])
 frequencies = sorted(data["Frequency GHZ rounded"].unique())
-default_frequencies = [13, 15, 18, 22, 23, 24]
+default_frequencies = [15, 18, 22, 23, 24]
 selected_frequencies = st.sidebar.multiselect("Select Frequency GHZ Rounded:", frequencies, default=default_frequencies)
 concession_min, concession_max = st.sidebar.slider(
     "Select Number of Concessions Range:",
@@ -125,7 +125,7 @@ if st.button('Click Here to Download the Filtered Data as an Excel File'):
     )
 
 # Add chart for number of concessions per owner
-st.header("Number of Concessions per Owner Within Selected Concession Range")
+st.header("Number of Concessions per Owner Within Selected Frequency Range")
 concessions_per_owner = filtered_data.groupby('Owner').size().reset_index(name='counts')
 fig = px.bar(concessions_per_owner, x='Owner', y='counts', color='counts')
 st.plotly_chart(fig)
