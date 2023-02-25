@@ -7,7 +7,7 @@ import re
 
 # %%
 # Read the CSV table 
-data_df = pd.read_csv("table-2.csv",header= None, sep = ";")
+data_df = pd.read_csv("clean_sample_data_capstone_project.csv",header= None, sep = ";")
 
 data_df
 
